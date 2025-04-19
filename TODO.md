@@ -4,3 +4,4 @@
 - [ ] Task 68: optimize function 11
 - [ ] Task 198: optimize function 1
 - [ ] Task 550: optimize function 44
+- [ ] Task 920: optimize function 13
