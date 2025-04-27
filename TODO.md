@@ -6,3 +6,4 @@
 - [ ] Task 550: optimize function 44
 - [ ] Task 920: optimize function 13
 - [ ] Task 722: optimize function 23
+- [ ] Task 301: optimize function 16
