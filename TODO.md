@@ -7,3 +7,4 @@
 - [ ] Task 920: optimize function 13
 - [ ] Task 722: optimize function 23
 - [ ] Task 301: optimize function 16
+- [ ] Task 71: optimize function 41
