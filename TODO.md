@@ -8,3 +8,4 @@
 - [ ] Task 722: optimize function 23
 - [ ] Task 301: optimize function 16
 - [ ] Task 71: optimize function 41
+- [ ] Task 171: optimize function 6
