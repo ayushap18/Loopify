@@ -4,3 +4,4 @@ Session 885: tested feature 25, result OK
 Session 284: tested feature 1, result OK
 Session 722: tested feature 6, result OK
 Session 797: tested feature 6, result OK
+Session 996: tested feature 10, result OK
