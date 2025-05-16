@@ -9,3 +9,4 @@
 - [ ] Task 301: optimize function 16
 - [ ] Task 71: optimize function 41
 - [ ] Task 171: optimize function 6
+- [ ] Task 341: optimize function 10
