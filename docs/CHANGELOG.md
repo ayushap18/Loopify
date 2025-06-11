@@ -5,3 +5,4 @@
 - Update 1810: improved module 18
 - Update 4916: improved module 31
 - Update 7685: improved module 33
+- Update 12393: improved module 36
