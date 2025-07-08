@@ -7,3 +7,4 @@
 - Update 7685: improved module 33
 - Update 12393: improved module 36
 - Update 19126: improved module 47
+- Update 8620: improved module 17
