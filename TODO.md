@@ -12,3 +12,4 @@
 - [ ] Task 341: optimize function 10
 - [ ] Task 434: optimize function 0
 - [ ] Task 535: optimize function 14
+- [ ] Task 260: optimize function 0
