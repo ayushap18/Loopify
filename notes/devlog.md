@@ -12,3 +12,4 @@ Session 591: tested feature 0, result OK
 Session 901: tested feature 5, result OK
 Session 478: tested feature 2, result OK
 Session 921: tested feature 4, result OK
+Session 166: tested feature 2, result OK
