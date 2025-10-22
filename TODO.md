@@ -18,3 +18,4 @@
 - [ ] Task 961: optimize function 14
 - [ ] Task 16: optimize function 30
 - [ ] Task 484: optimize function 47
+- [ ] Task 780: optimize function 14
