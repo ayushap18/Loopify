@@ -20,3 +20,4 @@
 - [ ] Task 484: optimize function 47
 - [ ] Task 780: optimize function 14
 - [ ] Task 85: optimize function 2
+- [ ] Task 580: optimize function 5
