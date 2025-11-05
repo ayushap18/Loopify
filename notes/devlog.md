@@ -17,3 +17,4 @@ Session 497: tested feature 18, result OK
 Session 101: tested feature 6, result OK
 Session 665: tested feature 22, result OK
 Session 602: tested feature 8, result OK
+Session 450: tested feature 9, result OK
