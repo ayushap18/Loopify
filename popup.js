@@ -19,6 +19,7 @@ const btnCreatePlaylist = $('#btnCreatePlaylist');
 const btnRefreshTrack = $('#btnRefreshTrack');
 const btnOpenLibrary = $('#btnOpenLibrary');
 const btnClearLibrary = $('#btnClearLibrary');
+const btnPlayMashup = document.getElementById('btnPlayMashup');
 const loopListEl = $('#loopList');
 
 let token = null;
@@ -27,6 +28,9 @@ let suggestedStart = null, suggestedEnd = null;
 let loopIntervalHandle = null;
 let isLooping = false;
 let savedLoops = [];
+
+let mashupPlaying = false;
+let mashupAbort = null;
 
 function log(s){ logEl.textContent = `[${new Date().toLocaleTimeString()}] ${s}\n` + logEl.textContent; }
 
@@ -255,6 +259,52 @@ function renderLibrary() {
     li.appendChild(btnDel);
     loopListEl.appendChild(li);
   });
+}
+
+// --- Mashup Player ---
+btnPlayMashup.addEventListener('click', async () => {
+  if (mashupPlaying) {
+    if (mashupAbort) mashupAbort();
+    mashupPlaying = false;
+    btnPlayMashup.textContent = 'Play Mashup';
+    log('Mashup stopped');
+    return;
+  }
+  if (!savedLoops.length) return log('No saved loops');
+  mashupPlaying = true;
+  btnPlayMashup.textContent = 'Stop Mashup';
+  log('Starting mashup...');
+  let abort = false;
+  mashupAbort = () => { abort = true; };
+  for (let i = 0; i < savedLoops.length; i++) {
+    if (abort) break;
+    const loop = savedLoops[i];
+    log(`Mashup: Playing ${loop.name} [${loop.start.toFixed(2)}s -> ${loop.end.toFixed(2)}s]`);
+    await playLoopSegment(loop);
+    // Small gap between segments
+    if (i < savedLoops.length - 1 && !abort) await sleep(500);
+  }
+  mashupPlaying = false;
+  btnPlayMashup.textContent = 'Play Mashup';
+  log('Mashup finished');
+});
+
+async function playLoopSegment(loop) {
+  token = await getToken();
+  if (!token) { log('No token for mashup'); return; }
+  // Play track at loop.start
+  await fetch('https://api.spotify.com/v1/me/player/play', {
+    method: 'PUT',
+    headers: { Authorization: 'Bearer '+token, 'Content-Type':'application/json' },
+    body: JSON.stringify({ uris: [loop.uri], position_ms: Math.floor(loop.start * 1000) })
+  });
+  // Wait for the duration of the loop
+  const duration = Math.max(0, loop.end - loop.start);
+  await sleep(duration * 1000);
+}
+
+function sleep(ms) {
+  return new Promise(res => setTimeout(res, ms));
 }
 
 function cryptoRandomId() {

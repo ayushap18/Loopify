@@ -1,6 +1,34 @@
-body { font-family: Inter, Arial, sans-serif; width:360px; padding:12px; box-sizing:border-box; color:#111; }
-header { display:flex; justify-content:space-between; align-items:center; }
-h1{ font-size:18px; margin:0; }
+body {
+	font-family: Inter, Arial, sans-serif;
+	width:360px;
+	padding:12px;
+	box-sizing:border-box;
+	color:#111;
+	background: url('icons/background.png') no-repeat center center fixed;
+	background-size: cover;
+}
+header {
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	background: rgba(255,255,255,0.85);
+	border-radius: 8px;
+	padding: 8px 12px;
+	margin-bottom: 8px;
+}
+h1 {
+	font-size:18px;
+	margin:0 0 0 8px;
+	flex: 1 1 auto;
+}
+
+#logo {
+	width: 36px;
+	height: 36px;
+	border-radius: 8px;
+	object-fit: contain;
+	margin-right: 8px;
+}
 .card{ background:#fff; padding:10px; border-radius:8px; margin-top:10px; box-shadow:0 1px 4px rgba(0,0,0,0.06); }
 button{ margin:6px 6px 6px 0; padding:8px 10px; border-radius:6px; border:1px solid #ddd; background:#f7f7f7; cursor:pointer; }
 button:disabled{ opacity:0.5; cursor:not-allowed; }
