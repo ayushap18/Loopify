@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Loopify for Spotify",
+  "version": "1.0.1",
+  "description": "Loopify — select, loop and build mashup playlists from short musical lines in Spotify (requires Premium).",
+  "permissions": ["storage", "identity", "scripting", "activeTab"],
+  "host_permissions": [
+    "https://api.spotify.com/*",
+    "https://accounts.spotify.com/*",
+    "https://open.spotify.com/*",
+    "https://sdk.scdn.co/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://open.spotify.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

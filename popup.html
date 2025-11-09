@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Loopify</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Loopify</h1>
+      <div id="accountStatus">Not connected</div>
+    </header>
+
+    <section id="controls">
+      <button id="btnConnect">Connect Spotify</button>
+      <button id="btnRefreshTrack">Refresh Current Track</button>
+    </section>
+
+    <section id="playerArea" class="card" hidden>
+      <div id="trackInfo" class="muted">Track info</div>
+
+      <div class="row">
+        <button id="btnSuggest">Auto-suggest loop</button>
+        <button id="btnSetStart">Set Start (current pos)</button>
+        <button id="btnSetEnd">Set End (current pos)</button>
+      </div>
+      <div class="row small">
+        <label>Start: <span id="startVal">-</span></label>
+        <label>End: <span id="endVal">-</span></label>
+        <label>Dur: <span id="durVal">-</span></label>
+      </div>
+
+      <div class="row">
+        <button id="btnStartLoop">Start Loop</button>
+        <button id="btnStopLoop" disabled>Stop Loop</button>
+        <button id="btnSaveLoop">Save Loop</button>
+      </div>
+
+      <div class="row">
+        <button id="btnCreatePlaylist">Create Spotify Playlist from Saved Loops</button>
+        <button id="btnOpenLibrary">Open Loop Library</button>
+      </div>
+
+      <div id="log" class="log"></div>
+    </section>
+
+    <section id="libraryArea" class="card" hidden>
+      <h3>Saved Loops</h3>
+      <ul id="loopList"></ul>
+      <button id="btnClearLibrary">Clear Library</button>
+    </section>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
