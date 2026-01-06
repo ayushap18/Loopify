@@ -21,3 +21,4 @@ Session 450: tested feature 9, result OK
 Session 150: tested feature 28, result OK
 Session 40: tested feature 11, result OK
 Session 519: tested feature 23, result OK
+Session 274: tested feature 29, result OK
