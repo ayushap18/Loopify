@@ -26,3 +26,4 @@
 - [ ] Task 576: optimize function 14
 - [ ] Task 506: optimize function 26
 - [ ] Task 391: optimize function 13
+- [ ] Task 540: optimize function 25
