@@ -23,3 +23,4 @@ Session 40: tested feature 11, result OK
 Session 519: tested feature 23, result OK
 Session 274: tested feature 29, result OK
 Session 833: tested feature 27, result OK
+Session 59: tested feature 26, result OK
